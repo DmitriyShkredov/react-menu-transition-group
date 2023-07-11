@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  background-color: #3e21be;
 }
 
-.App-link {
-  color: #61dafb;
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 220px;
+  padding-top: 25px;
+  padding-left: 35px;
+  background-color: #2e159c;
+  border-bottom-right-radius: 100%;
+  transform: scale(0);
+  transition: transform 0.3s;
+  transform-origin: 0 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu.entering {
+  transform: scale(1);
+}
+
+.menu.entered {
+  transform: scale(1);
+}
+
+.menu.entered .menu__list {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.menu.exited {
+  transform: scale(0);
+}
+
+.menu.exiting {
+  transform: scale(1);
+}
+
+.menu.exiting .menu__list {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.menu__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.menu__item {
+  margin: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.menu-button {
+  margin-left: auto;
+  width: 27px;
+  height: 27px;
+  background-color: #fff;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
 }
