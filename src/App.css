@@ -20,35 +20,25 @@
   padding-left: 35px;
   background-color: #2e159c;
   border-bottom-right-radius: 100%;
+  transform-origin: 0 0;
   transform: scale(0);
   transition: transform 0.3s;
-  transform-origin: 0 0;
 }
 
-.menu.entering {
+.menu--entering {
   transform: scale(1);
 }
 
-.menu.entered {
+.menu--entered {
   transform: scale(1);
 }
 
-.menu.entered .menu__list {
-  opacity: 1;
-  transform: translateX(0);
+.menu--exiting {
+  transform: scale(1);
 }
 
-.menu.exited {
+.menu--exited {
   transform: scale(0);
-}
-
-.menu.exiting {
-  transform: scale(1);
-}
-
-.menu.exiting .menu__list {
-  opacity: 0;
-  transform: translateX(20px);
 }
 
 .menu__list {
@@ -58,6 +48,16 @@
   opacity: 0;
   transform: translateX(-20px);
   transition: opacity 0.3s, transform 0.3s;
+}
+
+.menu--entered .menu__list {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.menu--exiting .menu__list {
+  opacity: 0;
+  transform: translateX(20px);
 }
 
 .menu__item {
@@ -70,8 +70,7 @@
   margin-left: auto;
   width: 27px;
   height: 27px;
-  background-color: #fff;
+  background-color: transparent;
   padding: 0;
   border: 0;
-  background-color: transparent;
 }
