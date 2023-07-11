@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/react-menu-transition-group/static/css/main.85d6938b.css",
+    "main.js": "/react-menu-transition-group/static/js/main.a7655882.js",
+    "index.html": "/react-menu-transition-group/index.html",
+    "static/media/menu-icon.svg": "/react-menu-transition-group/static/media/menu-icon.b5faa3a9bffdcb7a0672adde0914d833.svg",
+    "main.85d6938b.css.map": "/react-menu-transition-group/static/css/main.85d6938b.css.map",
+    "main.a7655882.js.map": "/react-menu-transition-group/static/js/main.a7655882.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.85d6938b.css",
+    "static/js/main.a7655882.js"
+  ]
+}
